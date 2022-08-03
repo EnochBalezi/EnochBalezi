@@ -51,4 +51,15 @@ abstract class Model
         $query = $this->pdo->query($statement);
         return $this->resultat = $query->fetchAll();
     }
+
+    public function requette(String $sql, array $attributs = null)
+    {
+        if ($attributs != null) {
+            $query = $this->pdo->prepare($sql);
+            $query->execute($attributs);
+        } else {
+            $query = $this->pdo->query($sql);
+        }
+        return $query;
+    }
 }

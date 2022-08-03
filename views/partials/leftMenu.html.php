@@ -64,12 +64,13 @@
                     </a>
                     <div class="collapse" id="collapse5" aria-labelledby="headingFive" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                            <a class="nav-link" href="cours.php">Cours</a>
-                            <a class="nav-link" href="enseignant.php">Enseignants</a>
-                            <a class="nav-link" href="cote.php">Cotes</a>
-                            <a class="nav-link" href="periode.php">Periode</a>
+                            <a class="nav-link" href="index.php?controller=periode">Periode</a>
+                            <a class="nav-link" href="index.php?controller=cour">Cours</a>
+                            <a class="nav-link" href="index.php?controller=cote">Cotes</a>
+                            <a class="nav-link" href="index.php?controller=enseignant">Enseignants</a>
                         </nav>
                     </div>
+
                     <?php if (isset($_SESSION['autherized']) === "Admin") { ?>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
                             <div class="sb-nav-link-icon"><i class="fa fa-columns"></i></div>
