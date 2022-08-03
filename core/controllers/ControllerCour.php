@@ -74,4 +74,12 @@ class ControllerCour extends Controller
         $this->index();
         exit;
     }
+
+    public function recherche()
+    {
+        $title = "Recherche Cours";
+        extract($_POST);
+        $search = $this->model->rechercheCours($searchData);
+        Renderer::render("cours/search", compact('title', 'search'));
+    }
 }

@@ -60,4 +60,14 @@ class Cour extends Model
     {
         return $this->persist("DELETE FROM cours WHERE codeCours=?", [$codeCours]);
     }
+
+    public function rechercheCours(string $critere)
+    {
+        return $this->find("
+        SELECT codeCours, designationCours,designation,concat(nom,' ',postNom) as enseignan
+        FROM cours inner join enseignants on enseignants.matricule=cours.enseignant
+        inner join promotions on promotions.codePromotion=cours.promotion
+        
+        WHERE designationCours like '%$critere%'");
+    }
 }

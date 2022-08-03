@@ -30,7 +30,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($cours as $key => $value) {
+                    foreach ($search as $key => $value) {
                     ?>
                         <tr>
                             <td><?= $value->codeCours ?></td>
