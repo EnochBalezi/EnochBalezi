@@ -2,7 +2,7 @@
 
 namespace Config;
 
-class ValidationUser
+class ValidationPeriode
 {
     private static $message = [];
 
